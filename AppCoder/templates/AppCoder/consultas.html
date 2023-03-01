@@ -1,11 +1,26 @@
-{% extends "AppCoder/padre.html" %} <!--la fuente de nuestros datos-->
-    {% load static %}  <!--Toma lo que está dentro de la carpeta "static"-->
-{% block contenidoQueCambia %}
+    {% extends "AppCoder/padre.html" %}
+    {% load static %}
+    {% block contenidoQueCambia %}
 
-    <!--Aqui se va a colocar lo que se cambia. Y está asociado a esta vista-->
-    <h1>Consultas</h1>
-    <p>Se ha heredado todo desde la plantilla "padre"</p>
-    <h3>En el hijo, cursos.html, no tenemos casi nada</h3>
+    <!-- Aqui va lo que cambia y lo asociado a la vista-->
+    {% if miFormulario.error %}
+    <p style="color:red;"> Estan mal los datos, revisar</p>
 
-    <button href:"AppCoder/padre.html">Hola</button>
-    {% endblock %}
+    {% endif %}
+    <form action="" method="POST"> {% csrf_token %} 
+    
+        <!-- Acá esta la magia de Django-->
+        &nbsp;&nbsp;<p><strong>Si tiene dudas o recomendaciones puedes comunicarte con nosotros completando el siguiente formulario:</strong></p>
+
+        <table>
+            {{miFormulario.as_table}}
+
+        </table>
+        <br>
+        
+    <input type="submit" value="Enviar" >
+        
+    </form>
+
+
+{% endblock %}

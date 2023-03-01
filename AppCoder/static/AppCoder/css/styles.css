@@ -34,7 +34,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
-  --bs-secondary: #6c757d;
+  --bs-secondary: #1581df;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -42,7 +42,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
-  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-rgb: 177, 251, 255;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -88,16 +88,12 @@
   margin: 30px auto;
 }
 
+
 header{
-  width:1000px;
+  width:144px;
   height:250px;
-  background: url(playa.jpg);
+  background: url("{% static 'AppCoder/assets/img/playa.jpg' %}");
 }
-
-
-
-
-
 
 
 body {
@@ -4059,6 +4055,8 @@ textarea.form-control-lg {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  margin-top: 1px;
+  margin-bottom: -10px;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -7786,7 +7784,9 @@ textarea.form-control-lg {
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+
 }
+
 
 .text-body {
   --bs-text-opacity: 1;
@@ -7835,6 +7835,11 @@ textarea.form-control-lg {
 }
 
 .bg-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-mezcla {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -11327,7 +11332,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("C:/Users/Usuario/Desktop/Entrega3/ProyectoCoder/AppCoder/static/AppCoder/assets/img/playa.jpg/playa.jpg") no-repeat center center;
+  background: url("{% static 'AppCoder/assets/img/playa.jpg' %}") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -11335,7 +11340,7 @@ header.masthead {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/playa.jpg") no-repeat center center;
+  background: url("{% static 'AppCoder/assets/img/playa.jpg' %}") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -11391,7 +11396,7 @@ header.masthead h1, header.masthead .h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/playa.jpg") no-repeat center center;
+  background: url("{% static 'AppCoder/assets/img/playa.jpg' %}") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -11411,3 +11416,4 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+

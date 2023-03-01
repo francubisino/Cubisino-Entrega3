@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario - Sucursales</title>
+    <title>Autos</title>
 </head>
 <body>
     {% extends "AppCoder/padre.html" %}
@@ -16,10 +16,10 @@
     <p style="color:red;"> Estan mal los datos, revisar</p>
 
     {% endif %}
-    <form action="" method="POST"> {% csrf_token %} 
+    <form action="buscar_auto" method="POST"> {% csrf_token %} 
     
         <!-- Acá esta la magia de Django-->
-&nbsp;&nbsp;<p><strong>¿Abriste una nueva sucursal? Agregala a través del siguiente formulario: </strong></p>
+&nbsp;&nbsp;<p><strong>¿Estás buscando un auto? Selecciona las características que deseas que tenga: </strong></p>
 
         <table>
             {{miFormulario.as_table}}
@@ -31,10 +31,7 @@
         
     </form>
         <br>
-    <form action="/AppCoder/">
-        <input type="submit" value="Volver a inicio">
-    </form>
-
+    
 {% endblock %}
 </body>
 </html>
